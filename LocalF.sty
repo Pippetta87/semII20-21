@@ -1,0 +1,29 @@
+\ProvidesPackage{LocalF}
+
+\newcounter{columneqc}
+\stepcounter{equation}
+\newcommand\Label[1]{&\refstepcounter{columneqc}\ (\theequation.\thecolumneqc)\ltx@label{#1}&}
+
+\newcommand{\Exp}[1]{\text{exp}\{#1\}}
+
+\newcommand{\mss}{modello solare standard}
+
+\newenvironment{errata}[1][ ]%%%% errata
+{\refstepcounter{erratac}\adderratacontent{#1}%
+\begingroup {\theerratac: #1}
+\color{grey}
+}{\vspace{5mm}\noindent\rule{0.5\textwidth}{0.4pt}\\\endgroup}
+
+\ifx\status\keeptrying
+\newenvironment{wordonframe}[1]{\begin{frame}[allowframebreaks]{#1}}{\end{frame}}
+\else
+\newenvironment{wordonframe}[1]{\comment}{\endcomment}
+\fi
+
+\newcommand{\scr}{Schr\"oedinger}
+\newcommand{\maglon}{M_z}
+\newcommand{\magort}{\vec{M}_{\perp}}
+\newcommand{\BW}{BW}
+\newcommand{\VXL}{Voxel}
+\newcommand{\FOV}{FOV}
+\newcommand{\BWr}{BW_{read}}

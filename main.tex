@@ -1,0 +1,98 @@
+\documentclass[10pt,xcolor={usenames},fleqn,mathserif,serif]{beamer}
+%%%Usefull link
+%tikz-equations:
+%http://www.wekaleamstudios.co.uk/posts/creating-a-presentation-with-latex-beamer-equations-and-tikz/
+\hypersetup{pdfpagemode=FullScreen}
+%% colors
+\definecolor{bittersweet}{rgb}{1.0, 0.44, 0.37}
+\definecolor{brilliantlavender}{rgb}{0.96, 0.73, 1.0}
+\definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+\definecolor{violetw}{rgb}{0.93, 0.51, 0.93}
+\definecolor{Veronica}{rgb}{0.63, 0.36, 0.94}
+\definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
+\definecolor{darkgray}{rgb}{0.66, 0.66, 0.66}
+\definecolor{brightcerulean}{rgb}{0.11, 0.67, 0.84}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{ochre}{rgb}{0.8, 0.47, 0.13}
+\definecolor{midnightblue}{rgb}{0.1, 0.1, 0.44}
+\definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
+\definecolor{grey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
+\definecolor{bf}{RGB}{88, 86, 88}
+\definecolor{bb}{RGB}{177, 177, 177}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% importa pacchetti
+\usepackage{usepkg}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
+\usepackage{functions}
+%http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+\newcommand{\setmuskip}[2]{#1=#2\relax} %%problem usinig mu with calc (req by mathtools) loaded
+\usepackage{sources}
+%\usepackage{length}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni per questo file main
+\usepackage{mathOp}
+\usepackage{beamersetup}
+\def\status{coazione}
+\def\keeptrying{coazione}
+\usepackage{LocalF}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Secondo Semestre 20/21}
+% A subtitle is optional and this may be deleted
+\subtitle{Multi-Wavelenght detectors and their calibration, radiation transfer in ISM, and what ever come on us (Teorie gravitazione, condensed matter e dispositivi fotonici}
+\date{Gi\'a cominciano lezioni, \today}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+% Let's get started
+\begin{document}
+
+\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{2pt}\setlength\belowdisplayskip{2pt}\setlength\abovedisplayshortskip{2pt}\setlength\belowdisplayshortskip{2pt}}
+
+\addtobeamertemplate{block begin}{\vspace*{-3pt}}{}
+\addtobeamertemplate{block end}{}{\vspace*{-3pt}}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{tempo interno per}
+\tableofcontents[onlyparts]
+\end{frame}
+
+% Section and subsections will appear in the presentation overview
+% and table of contents.
+%\frame{\tableofcontents[onlyparts]}
+%\begin{frame}{Argomenti}
+%  \tableofcontents[part=1,hideallsubsections%,pausesections
+%  ]
+%  % You might wish to add the option [pausesections]
+%\end{frame}
+
+\part{Intro}\linkdest{intro}
+
+\begin{frame}[label={why}]{Why?}
+
+\end{frame}
+
+\begin{wordonframe}{Cosa provo?}
+
+\end{wordonframe}
+
+\part{Steve blowing}
+\input{reg}
+
+\part{Succo}\linkdest{succo}
+\input{succo}
+
+\part{Processi Astrofisici}\linkdest{processi}
+\section{Radiazione}\linkdest{atomsphotons}
+\input{radiation}
+
+\part{Astrofisica osservativa}\linkdest{osservativa}
+\section{Rivelatori}
+%\input{}
+
+%\part{Basi NMR: nuclei, spin, campi magnetici e magnetizzazione della materia}\label{part:}
+%\input{NMR}
+
+\end{document}
